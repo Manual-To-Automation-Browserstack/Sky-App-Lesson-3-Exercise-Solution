@@ -1,10 +1,10 @@
 ![Logo](https://www.browserstack.com/images/static/header-logo.jpg)
 
-# Manual To Automation @ SKY - App - Lesson 2 - WebDriverIO Appium Exercise Solution <a href="https://appium.io/"><img src="https://brandslogos.com/wp-content/uploads/images/large/appium-logo.png" alt="appium" height="22" /></a>
+# Manual To Automation @ SKY - App - Lesson 3 - WebDriverIO Appium Exercise Solution <a href="https://appium.io/"><img src="https://brandslogos.com/wp-content/uploads/images/large/appium-logo.png" alt="appium" height="22" /></a>
 
 ## Introduction
 
-This code is an example of a WebDriverIO Appium framework running on BrowserStack against a real mobile device.
+This code is an example of a successful login flow using the WebDriverIO Appium framework running on BrowserStack against a real mobile device.
 
 As we are running on BrowserStack, you don't need Appium installed, but you should already have this intstalled. It is also useful for debugging with the use of Appium Inspector.
 
@@ -26,19 +26,24 @@ Follow the below steps to get the code onto your local machine.
 * Go to the directory where you want to place the code using [cd](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cd) for Windows, and it functions mostly the same for Mac. You just use "cd" but the folder structure on Mac is different (/Users/username/Documents instead of C:/Users/username/Documents)
 * Copy the following command into the terminal, (remember, you must have [Git](https://git-scm.com/downloads) installed)
 ```sh
-git clone https://github.com/Manual-To-Automation-Browserstack/Sky-App-Lesson-2-Exercise-Solution.git.
+git clone https://github.com/Manual-To-Automation-Browserstack/Sky-App-Lesson-3-Exercise-Solution.git.
 ```
 * Move into the directory that you just cloned by typing
 ```sh
-cd Sky-App-Lesson-2-Exercise-Solution
+cd Sky-App-Lesson-3-Exercise-Solution
 ```
 * When inside this directory, copy the following command and run it:
 ```sh
 npm install
 ```
-* Then simply run the below command:
+* Then simply run the below command to run on ios:
 ```sh
-npm run bstack-single
+npm run bstack-single-ios
+```
+
+And run the below command to run on android:
+```sh
+npm run bstack-single-android
 ```
 
 This script is useful to get started. You will find the others listed in the "scripts" section of the [package.json](./package.json) file. You can also add more as needed. You simply run:
