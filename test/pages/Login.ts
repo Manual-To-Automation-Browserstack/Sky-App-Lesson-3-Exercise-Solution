@@ -6,14 +6,11 @@ class Login {
     }
 
     async addToFavourites () {
-        // const selector = `label == "" AND name == "mark-favourite-12"`;
-        // const switcher = await $(`-ios predicate string:${selector}`);
-        // await switcher.click();
         await this.favouriteSelector.waitForDisplayed({ timeout: 30000 });
         await this.favouriteSelector.click();
     }
 
-    async performLogin () {
+    async performLogin (username : string, password : string) {
         await this.loginUsernameDropdownSelector.waitForDisplayed({ timeout: 30000 });
         await this.loginUsernameDropdownSelector.click();
 
@@ -22,7 +19,7 @@ class Login {
             await this.loginUsernameSelector.click();
         } else {
             await this.loginUsernameSelector.waitForDisplayed({ timeout: 30000 });
-            await this.loginUsernameSelector.addValue("demouser");
+            await this.loginUsernameSelector.addValue(username);
             await this.doneWheelSelector.waitForDisplayed({ timeout: 30000 });
             await this.doneWheelSelector.click();
         }
@@ -35,7 +32,7 @@ class Login {
             await this.loginPasswordSelector.click();
         } else {
             await this.loginPasswordSelector.waitForDisplayed({ timeout: 30000 });
-            await this.loginPasswordSelector.addValue("testingisfun99");
+            await this.loginPasswordSelector.addValue(password);
             await this.doneWheelSelector.waitForDisplayed({ timeout: 30000 });
             await this.doneWheelSelector.click();
         }
